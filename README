@@ -1,0 +1,19 @@
+casiano@exthost:~/src/LPP/erlang$ cat factorial.erl 
+-module(factorial).
+-export([fac/1]).
+
+fac(0) -> 1;
+fac(N) -> N * fac(N-1).
+
+casiano@exthost:~/src/LPP/erlang$ erl
+Erlang R13B03 (erts-5.7.4) [source] [smp:2:2] [rq:2] [async-threads:0] [hipe] [kernel-poll:false]
+
+Eshell V5.7.4  (abort with ^G)
+1> c(factorial).
+{ok,factorial}
+2> factorial:fac(4).
+24
+3> factorial:fac(0).
+1
+4> halt().
+
